@@ -214,7 +214,7 @@ header{
   background-color: rgb(255, 255, 255);
   border-width: 2px;
 }
-@media screen and (max-width:900px){
+@media screen and (max-width:1000px){
 
 .munkamain{
   display: block;
