@@ -198,7 +198,7 @@ header{
     margin-left: 2%;
 
 }
-.munkamain{
+.szakmamain{
   display: block;           /* Egymás mellé teszi a képet és a szöveget */
   font-size: 20px;
     font-family:'Times New Roman';
@@ -334,7 +334,7 @@ header{
 .navbar a.mobile {
   display:none;
 }
-.munkamain{
+.szakmamain{
   display: block;           /* Egymás mellé teszi a képet és a szöveget */
   font-size: 20px;
     font-family:'Times New Roman';
