@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <meta http-equiv="Content-Type" content="text/html"; charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=0.5"/>
+  <meta http-equiv="X-UA-Compatible"content="IE=edge">
+  <title>Munkáim</title>
+<head>
+  <link rel="stylesheet" href="portfolio.css">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body style="background-color:gray;">
+<div class="navbar">
+  <a href="Munkameveim.html", style="background-color: rgb(5, 121, 5)">Éveim</a>
+  <a href="szakmaitap.html">Tapasztalat</a>
+  <a href="tdk.html">TDK</a>
+
+  <div class="dropdown">
+    <button class="dropbtn">Rólam 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="index.html">Bemutatkozás</a>
+    </div>
+  </div> 
+</div>
+<div class="footer">
+
+  <p>Elérhetőségek: <a class="contact" href="mailto:racsikbalint01@gmail.com">Email,</a><a class="contact" href="tel:+36305469067">                               Telefon</a></p>
+  Copyright © 2025-2026
+</div>
+<div class="munkamain" style="margin-top:3%">
+<img src="nyak.jpg" alt="Kérem,várjon" style="width:30%;height:20%; margin:2%; border-style:solid; border-radius:20px;">
+<h>Forrasztás/nyák forrasztás</h>
+<p> Már az első-második évtől fogva gyakoroltuk a forrasztást kisebb nagyobb sikerekkel. <br>Elsősorban breadboardon tesztelt köröket terveztünk,majd forrasztottunk össze rajzok-elrendezés alapján, majd berendelt nyákokon gyakoroltunk.<br><br>Később a TDK-ban is folytattuk a munkánk, kisebb szerkezeteket, áramköröket és kábeleket(kommunikáció) forrasztottunk.<br>
+   A sok gyakorlat gyümölcsét pedig otthon is élvezhettem, többször is készítettem hobbiszerűen a családomnak és barátnőm családjának ajándékokat/hasznos eszközöket, hiszen el tudtam sajátítani ezt a képességet.
+  </p>
+</div>
+<div class="munkamain" style="margin-top:3%">
+  <img src="fem.jpg"alt="Kérem,várjon" style="width:30%;height:20%; margin:2%; border-style:solid; border-radius:20px;">
+  <h>Kézi fémmegmunkálás</h>
+  <p>Az első két évemben tantárgyszinten be volt építve a mindennapjaimba, megismerkedtem a folyamatokkal, a hozzájuk tartozó eszközökkel és használatukkal.<br>
+    Majd pedig folyamatosan az elkészített munkatervek és rajz alapján elkészítettük a munkadarabjainkat reszeléssel, fúrásokkal, fűrészelésekkel és persze sok-sok méréssel a folyamat közben.
+  </p>
+</div>
+<div class="munkamain" style="margin-top:3%;">
+  <img src="arduino.png"alt="Kérem,várjon" style="width:30%;height:20%; margin:2%; border-style:solid; border-radius:20px;">
+  <h>A terv alapból egy jelzőlámpa szimulálása volt.</h>
+  <p style="text-align: center;"> Alkatrészei között megtalálhatóak: Arduino MEGA egység, LED-ek, egy hangszóró, egy hétszegmenses kijelző és persze az ezeket összekötő vezetékek, a tápellátást pedig egy usb kábel biztosította.<br><br><br>
+  <br>A működésével pedig szimuláltattuk egy kereszteződés egyik oldalának rendszerét, jelzőlámpával, gyalogátkelővel, számlálóval és hangjelzéssel.<br><br>
+  A program szerint 8 másodpercig tart az autósoknak a piros, amely alatt a gyalogosok zöldet kapnak, s az utolsó három másodpercet hangjelzés kíséri a villogó zöldet a sürgetés jeleként.
+  Szinkronizálva átvált a gyalogos lámpája pirosra, az autósé piros-sárgára, majd zöldre 10 másodpercig, sárga majd piros és kezdődik elölről a program.
+</p>
+<p><div style="background-color:gray; height:350px;text-align:left ;border: 5px solid #ccc; overflow: auto; padding: 5%;">
+#define buzz 52
+#define g 5<br>
+#define f 4<br>
+#define a 3<br>
+#define b 2<br>
+#define e 8<br>
+#define d 7<br>
+#define c 6<br>
+#define piros 26<br>
+#define sarga 28<br>
+#define zold 30<br>
+#define gyp 25<br>
+#define gyz 27<br><br>
+void setup() {<br>
+pinMode(piros,OUTPUT);<br>
+pinMode(sarga,OUTPUT);<br>
+pinMode(zold,OUTPUT);<br>
+pinMode(gyp,OUTPUT);<br>
+pinMode(gyz,OUTPUT);<br>
+pinMode(buzz, OUTPUT);<br>
+
+}<br>
+void loop() {<br>
+//Zöld a lámpa<br>
+  digitalWrite(zold,HIGH);<br>
+  digitalWrite(gyp,HIGH);<br>
+ 
+  delay(8000);<br>
+ //Sárga a lámpa<br>
+  digitalWrite(zold,LOW);<br>
+  digitalWrite(sarga,HIGH);<br><br>
+ 
+  delay(2000);<br>
+ //Piros a lámpa, zöld a gyalogos lámpa, 8 a számláló<br>
+  digitalWrite(sarga,LOW);<br>
+  digitalWrite(piros,HIGH);<br>
+  digitalWrite(gyp,LOW);<br>
+  digitalWrite(gyz,HIGH);<br>
+  digitalWrite(a,HIGH);<br>
+  digitalWrite(b,HIGH);<br>
+  digitalWrite(c,HIGH);<br>
+  digitalWrite(d,HIGH);<br>
+  digitalWrite(e,HIGH);<br>
+  digitalWrite(f,HIGH);<br>
+  digitalWrite(g,HIGH);<br><br>
+ 
+  delay(1000);<br>
+  //7 a számláló<br>
+  digitalWrite(d,LOW);<br>
+  digitalWrite(e,LOW);<br>
+  digitalWrite(f,LOW);<br>
+  digitalWrite(g,LOW);<br>
+  digitalWrite(a,HIGH);<br>
+  digitalWrite(b,HIGH);<br>
+  digitalWrite(c,HIGH);<br><br>
+  
+  delay(1000);<br>
+  //6 a számláló<br>
+  digitalWrite(b,LOW);<br>
+  digitalWrite(a,HIGH);<br>
+  digitalWrite(f,HIGH);<br>
+  digitalWrite(g,HIGH);<br>
+  digitalWrite(e,HIGH);<br>
+  digitalWrite(d,HIGH);<br>
+  digitalWrite(c,HIGH);<br><br>
+ 
+  delay(1000);<br>
+  //5 a számláló<br>
+  digitalWrite(e,LOW);<br>
+  digitalWrite(a,HIGH);<br>
+  digitalWrite(f,HIGH);<br>
+  digitalWrite(g,HIGH);<br>
+  digitalWrite(c,HIGH);<br>
+  digitalWrite(d,HIGH);<br><br>
+  
+  delay(1000);<br>
+//4 a számláló<br>
+  digitalWrite(a,LOW);<br>
+  digitalWrite(d,LOW);<br>
+  digitalWrite(b,HIGH);<br>
+  digitalWrite(f,HIGH);<br>
+  digitalWrite(g,HIGH);<br>
+  digitalWrite(c,HIGH);<br><br>
+
+  delay(1000);<br>
+//3 a számláló<br>
+  digitalWrite(f,LOW);<br>
+  digitalWrite(a,HIGH);<br>
+  digitalWrite(b,HIGH);<br>
+  digitalWrite(g,HIGH);<br>
+  digitalWrite(c,HIGH);<br>
+  digitalWrite(d,HIGH);<br><br>
+
+  delay(1000);<br>
+//2 a számláló és villog a gyalogos lámpa zölden és sípol<br>
+  digitalWrite(c,LOW);<br>
+  digitalWrite(b,HIGH);<br>
+  digitalWrite(g,HIGH);<br>
+  digitalWrite(e,HIGH);<br>
+  digitalWrite(d,HIGH);<br>
+  digitalWrite(gyz,HIGH);<br>
+  tone(buzz,1000);<br><br>
+  
+  delay(500);<br>
+  //síp off<br>
+  noTone(buzz);<br>
+  digitalWrite(gyz,LOW);<br><br>
+  
+  delay(500);<br>
+//1 a számláló és villog a gyalogos lámpa zölden és sípol<br>
+  digitalWrite(gyz,HIGH);<br>
+  tone(buzz,1000);<br>
+  digitalWrite(g,LOW);<br>
+  digitalWrite(e,LOW);<br>
+  digitalWrite(d,LOW);<br>
+  digitalWrite(a,LOW);<br>
+  digitalWrite(b,HIGH);<br>
+  digitalWrite(c,HIGH);<br><br>
+  
+  delay(500);<br>
+  //síp off<br>
+  noTone(buzz);<br>
+  digitalWrite(gyz,LOW);<br><br>
+  
+  delay(500);<br>
+  //piros és sárga a lámpa<br>
+  digitalWrite(b,LOW);<br>
+  digitalWrite(c,LOW);<br>
+  digitalWrite(gyz,LOW);<br>
+  digitalWrite(sarga,HIGH);<br><br>
+
+  delay(1000);<br>
+//zöld a lámpa és piros a gyalogos lámpa<br>
+  digitalWrite(piros,LOW);<br>
+  digitalWrite(sarga,LOW);<br>
+  digitalWrite(gyp,LOW);<br><br>
+}<br>
+</div></p>
+</div>
+<div class="munkamain" style="margin-top:3%;">
+  <img src="motortabla.jpg"alt="Kérem,várjon" style="width:30%;height:20%; margin:2%; border-style:solid; border-radius:20px;">
+  <h>A feladatunk az volt, hogy az elemeket szereljük fel a táblára és<br> adatlapok alapján üzemeljük be.</h>
+  <p>Található a táblán 2 motor, 3 frekvenciaváltó, potenciométerek, kapcsolók és 2 biztosíték.<br><br>
+  Először felfogattuk a síneket, a kábelcsatornát, majd egymás után a motorokat és a frekvenciaváltókat. Utána következett a kissé hosszadalmas beüzemelés-bekötés. <br>
+  A háromfázisú motornak egyedi tartót terveztünk és készítettünk, kétállású kapcsolóval(forgásirány) és egy potenciométerrel 
+  vezéreltük a frekvenciaváltón keresztül. A tesztek felügyelet mellett, mind sikeresen végződtek, így kész is lett a gyakorlótábla az alsóbbéveseknek.</p>
+  </div>
+  <div class="munkamain" style="margin-top:3%">
+  <img src="pneumatika.jpg"alt="Kérem,várjon" style="width:30%;height:20%; margin:2%; border-style:solid; border-radius:20px;">
+  <h>Betekintést nyerhettünk a pneumatika/<br>
+    elektropneumatika alapjaiba is</h>
+  <p style="text-align: center;">A táblán láthatunk 3 munkahengert, ezekhez tartozó szelepeket és 2 végállás szenzort.<br><br>
+    A működését relatív egyszerűen el lehet magyarázni,<br> röviden tömören ABCCBA.<br>
+  A bal oldalon 2 gomb van bekötve, SET/RESET funkcióval, a SET gomb kinyomja a felső munkahengert, és elindítja az időzítőt.<br>
+Az idő lejárta kinyomja a második munkahengert, amelynek a végállása kinyomja a harmadik munkahengert.<br>
+Ha a harmadik munkahenger végállása jelez és megnyomjuk a RESET gombot, akkor ugyanilyen sorrendben elvégződik viisszafelé a folyamat<br>
+A pneumatikával többször is szimulálni tudtuk a korábban megírt programjainkat is.
+</p>
+  </div>
+  <div class="munkamain" style="margin-top:3%">
+  <img src="szenzorok.jpg"alt="Kérem,várjon" style="width:30%; margin:2%; border-style:solid; border-radius:20px;">
+  <h>Szenzorok</h><p> Hosszas kutatás után, adatlapok alapján leteszteltünk számos, a táblára felszerelt szenzort, később pedig részletesebben megismerkedhettünk a technológiájukkal és működésükkel elméletben.</p>
+  </div>
+  <div class="munkamain" style="margin-top:3%">
+  <img src="tabla.jpg"alt="Kérem,várjon" style="width:40%;height:20%; margin:2%;border-style:solid; border-radius:20px;">
+  <h>Különféle vezérlésű motorok</h>
+  <p>Az elhelyezés kiötlése után tartókat/kisebb álványokat csináltunk a felfogatáshoz, majd a sikeres felhelyezés és bekötés után teszteltük őket a hozzájuk tartózó potenciométerekkel.</p>
+  </div>
+<div>
+</div>
+<div><br><br><br></div>
+</body>
+</html>
