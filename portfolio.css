@@ -194,8 +194,8 @@ header{
     border-radius:20px;
     background-color: rgb(255, 255, 255);
     border-width: 2px;
-    margin-right:2%;
-    margin-left:2%;
+    margin-right:0px;
+    margin-left:0px;
 
 }
 .container {
