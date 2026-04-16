@@ -232,8 +232,8 @@ header{
     display:none;
   }
   .main{
-    margin-left: 2%;
-    margin-right:2%;
+    margin-left: 0;
+    margin-right:5%;
     margin-top: 100px;
     padding: 5px;
     margin-bottom: 0px;
