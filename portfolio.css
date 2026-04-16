@@ -136,7 +136,10 @@ h2, p {
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
-
+.mobiltop{
+    margin-top:2%;
+  margin-left: 20%;;
+}
 .dropdown-content a {
   float: none;
   color: black;
@@ -185,9 +188,11 @@ header{
 }
 /*munkaim oldal*/
 .munkamain{
+  margin-top:2%;
+  margin-bottom:2%;
   display: flex;           /* Egymás mellé teszi a képet és a szöveget */
   align-items: baseline; 
-  gap:10%;   /* Függőlegesen középre igazítja őket */         /* Távolság a kép és a szöveg között */
+  gap:75px;   /* Függőlegesen középre igazítja őket */         /* Távolság a kép és a szöveg között */
   font-size: 20px;
     font-family:'Times New Roman';
     border-style:solid;
@@ -199,6 +204,8 @@ header{
 
 }
 .szakmamain{
+  margin-top:2%;
+  margin-bottom:2%;
   display: block;           /* Egymás mellé teszi a képet és a szöveget */
   font-size: 20px;
     font-family:'Times New Roman';
@@ -231,7 +238,10 @@ header{
   border-width: 2px;
 }
 @media screen and (max-width:1000px){
-
+.mobiltop{
+  margin-top:2%;
+  margin-left:0px;
+}
 .munkamain{
   display: block;
   font-size: 20px;
@@ -335,6 +345,8 @@ header{
   display:none;
 }
 .szakmamain{
+  margin-top:2%;
+  margin-bottom:2%;
   display: block;           /* Egymás mellé teszi a képet és a szöveget */
   font-size: 20px;
     font-family:'Times New Roman';
