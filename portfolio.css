@@ -194,9 +194,20 @@ header{
     border-radius:20px;
     background-color: rgb(255, 255, 255);
     border-width: 2px;
-    margin-right:0px;
-    margin-left:0px;
+    margin-right:2%;
+    margin-left: 2%;
 
+}
+.munkamain{
+  display: block;           /* Egymás mellé teszi a képet és a szöveget */
+  font-size: 20px;
+    font-family:'Times New Roman';
+    border-style:solid;
+    border-radius:20px;
+    background-color: rgb(255, 255, 255);
+    border-width: 2px;
+    margin-right:2%;
+    margin-left: 2%;
 }
 .container {
   display: flex;
@@ -322,5 +333,16 @@ header{
 }
 .navbar a.mobile {
   display:none;
+}
+.munkamain{
+  display: block;           /* Egymás mellé teszi a képet és a szöveget */
+  font-size: 20px;
+    font-family:'Times New Roman';
+    border-style:solid;
+    border-radius:20px;
+    background-color: rgb(255, 255, 255);
+    border-width: 2px;
+    margin-right:0;
+    margin-left:0;
 }
 }
