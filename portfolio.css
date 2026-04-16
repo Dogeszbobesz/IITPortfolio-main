@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box; /* Ez megakadályozza, hogy a padding és a margin "kitolja" az elemeket a képernyőről */
+}
 html {
   scroll-behavior: smooth;
 }
